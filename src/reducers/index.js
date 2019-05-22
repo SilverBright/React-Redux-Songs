@@ -3,10 +3,10 @@ import { combineReducers } from 'redux';
 //reducer for songs list
 const songsReducer = () => {
   return [
-    { title: 'Song 1', duration: '4:05' },
-    { title: 'Song 2', duration: '3:53' },
-    { title: 'Song 3', duration: '2:25' },
-    { title: 'Song 4', duration: '4:45' },
+    { title: 'Song 1', duration: '4:05', id: 1 },
+    { title: 'Song 2', duration: '3:53', id: 2 },
+    { title: 'Song 3', duration: '2:25', id: 3 },
+    { title: 'Song 4', duration: '4:45', id: 4 },
   ];
 };
 
