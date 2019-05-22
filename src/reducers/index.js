@@ -12,6 +12,7 @@ const songsReducer = () => {
 
 // reducer for selecting a song
 const selectedSongReducer = (selectedSong=null, action) => {
+  // 'SONG_SELECTED' was created in the actions/index.js file
   if (action.type === 'SONG_SELECTED') {
     return action.payload;
   }
