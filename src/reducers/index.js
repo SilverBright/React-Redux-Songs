@@ -1,14 +1,16 @@
-// Reducer for selecting a song
+import { combineReducers } from 'redux';
 
+//reducer for songs list
 const songsReducer = () => {
   return [
-    { title: 'Song Number 1', duraction: '4:05' },
-    { title: 'Song Number 2', duraction: '3:53' },
-    { title: 'Song Number 3', duraction: '2:25' },
-    { title: 'Song Number 4', duraction: '4:45' },
+    { title: 'Song 1', duraction: '4:05' },
+    { title: 'Song 2', duraction: '3:53' },
+    { title: 'Song 3', duraction: '2:25' },
+    { title: 'Song 4', duraction: '4:45' },
   ];
 };
 
+// reducer for selecting a song
 const selectedSongReducer = (selectedSong=null, action) => {
   if (action.type === 'SONG_SELECTED') {
     return action.payload;
@@ -16,3 +18,10 @@ const selectedSongReducer = (selectedSong=null, action) => {
 
   return selectedSong;
 };
+
+// assign objects to combineReducers and export it
+export default combineReducers({
+  // key: 
+  songs: songsReducer,
+  selectedSong: selectedSongReducer
+});
