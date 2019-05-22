@@ -1,10 +1,14 @@
 import React from 'react';
-import { selectSong } from '../actions/index.js';
+import SongList from './SongList';
 
 // Stateless functional component
 
 const App = () => {
-  return <div>App</div>;
-}
+  return (
+    <div>
+      <SongList />
+    </div>
+  );
+};
 
 export default App;
