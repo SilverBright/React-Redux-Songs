@@ -1,3 +1,5 @@
+// Container component with state
+
 // import React from 'react';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -37,7 +39,7 @@ import { selectSong } from '../actions/index.js';
 
   // pass in the entire state, which is all of the songs, directly from the store
   const mapStateToProps = state => {
-    console.log(state);
+    // console.log(state);
     //         key: value
     return { songs: state.songs };
     // by using return { key: value }, it will now show up as props in the component SongList
@@ -46,6 +48,8 @@ import { selectSong } from '../actions/index.js';
  // pass in the component as the second function call (SongList)
  // { selectSong: selectSong } is a key: value and comes from actions/index.js
  // because the key matches the value we can just shorten it to selectSong
+ // connect performs a special operation on selectSong and will automatically throw it into the
+ // dispatch function behind the scenes
   export default connect(mapStateToProps, { selectSong })(SongList);
 
   // The connect function is just returning another function
